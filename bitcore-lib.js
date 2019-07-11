@@ -4623,15 +4623,12 @@ addNetwork({
   scripthash: 0x05,
   xpubkey: 0x0488b21e,
   xprivkey: 0x0488ade4,
-  networkMagic: 0xf9beb4d9,
-  port: 8333,
+  networkMagic: 0x12b2dcf0,
+  port: 10333,
   dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
+    'seeder.clashic.cash',
+    'seeder.bitcoincore.zone',
+    'seeder-mainnet.clashic.org'
   ]
 });
 
@@ -4660,13 +4657,11 @@ var testnet = get('testnet');
 // Add configurable values for testnet/regtest
 
 var TESTNET = {
-  PORT: 18333,
+  PORT: 20333,
   NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x0b110907),
   DNS_SEEDS: [
-    'testnet-seed.bitcoin.petertodd.org',
-    'testnet-seed.bluematt.me',
-    'testnet-seed.alexykot.me',
-    'testnet-seed.bitcoin.schildbach.de'
+    'testnet-seeder.clashic.cash',
+    'testnet-seeder.bitcoincore.zone'
   ]
 };
 
@@ -4677,7 +4672,7 @@ for (var key in TESTNET) {
 }
 
 var REGTEST = {
-  PORT: 18444,
+  PORT: 20444,
   NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfabfb5da),
   DNS_SEEDS: []
 };
